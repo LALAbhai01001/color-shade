@@ -7,6 +7,9 @@ const SingleColor = ({rgb,hex}) => {
     const handleCopy = ()=>{
         setCopy(true)
         navigator.clipboard.writeText(`#${hex}`)
+        setTimeout(() => {
+            setCopy(false)
+        }, 1000);
 
     }
   return (
